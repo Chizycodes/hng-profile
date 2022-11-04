@@ -14,13 +14,13 @@ const ProfileSection = () => {
 				onMouseEnter={() => setOverlay(true)}
 				onMouseLeave={() => setOverlay(false)}
 			>
-				<img src="/dp.jpg" id="profile__img" className="w-[88px] h-[88px] rounded-full" alt="my photo" />
+				<img src="/dp.jpg" id="profile__img" className="w-[88px] h-[88px] rounded-full" alt="me" />
 				{overlay && (
 					<div className="bg-[#344054BF] h-[88px] w-[88px] rounded-full flex justify-center items-end pb-3 absolute top-0">
 						<img src="/camera-icon.svg" alt="camera" />
 					</div>
 				)}
-			</div>
+			</div> 
 
 			<p id="twitter" className="mb-[24px] text-[20px] font-bold text-[#101828]">
 				Chizycodes
