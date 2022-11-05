@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const Contact = () => {
-	const [isValid, setIsValid] = useState(false);
 	const [formData, setFormData] = useState({
 		firstName: '',
 		lastName: '',
