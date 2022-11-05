@@ -1,4 +1,12 @@
+import { useState } from 'react';
+
 const Contact = () => {
+	const [isValid, setIsValid] = useState(false);
+	let name = 'Joy Okwudire';
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+	};
 	return (
 		<section className="mt-[54px] w-full max-w-[720px] px-3">
 			<h1 className="text-[36px] font-semibold mb-5">Contact Me</h1>
@@ -16,7 +24,7 @@ const Contact = () => {
 							type="text"
 							id="first_name"
 							placeholder="Enter your first name"
-							className="border border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px] mt-[6px] focus:border-[#84CAFF] outline-none"
+							className="border border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px] mt-[6px] focus:border-[#84CAFF] outline-none d-shadow placeholder:text-[#667085]"
 						/>
 					</div>
 
@@ -28,7 +36,7 @@ const Contact = () => {
 							type="text"
 							id="last_name"
 							placeholder="Enter your last name"
-							className="border border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px] mt-[6px] focus:border-[#84CAFF] outline-none"
+							className="border border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px] mt-[6px] focus:border-[#84CAFF] outline-none d-shadow placeholder:text-[#667085]"
 						/>
 					</div>
 				</div>
@@ -41,7 +49,7 @@ const Contact = () => {
 						type="text"
 						id="email"
 						placeholder="yourname@email.com"
-						className="border border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px] mt-[6px] focus:border-[#84CAFF] outline-none"
+						className="border border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px] mt-[6px] focus:border-[#84CAFF] outline-none d-shadow placeholder:text-[#667085]"
 					/>
 				</div>
 
@@ -53,16 +61,21 @@ const Contact = () => {
 						type="text"
 						id="message"
 						placeholder="Send me a message and I'll reply you as soon as possible..."
-						className="border border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px] mt-[6px] focus:border-[#84CAFF] outline-none h-[132px]"
+						className="border border-[#D0D5DD] rounded-[8px] py-[10px] px-[14px] mt-[6px] focus:border-[#84CAFF] outline-none h-[132px] d-shadow placeholder:text-[#667085]"
 					/>
 				</div>
 
 				<div className="flex gap-2 mb-[32px]">
-					<input type="checkbox" className="w-[20px] h-[20px] mt-[2px]" />
-					<label className="text-[#475467]">You agree to providing your data to Joy who may contact you.</label>
+					<input type="checkbox" className="w-[20px] h-[20px] mt-[2px] d-shadow" />
+					<label className="text-[#475467]">You agree to providing your data to {name} who may contact you.</label>
 				</div>
 
-				<button type="submit" className="text-white bg-[#1570EF] py-[12px] rounded-[8px] w-full" id="btn__submit">
+				<button
+					type="submit"
+					onClick={handleSubmit}
+					className="text-white bg-[#1570EF] py-[12px] rounded-[8px] w-full"
+					id="btn__submit"
+				>
 					Send message
 				</button>
 			</form>
